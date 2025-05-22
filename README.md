@@ -90,7 +90,7 @@ Registers a new user.
 
 ```json
 {
-  "username": "tejaswini",
+  "username": "sai_praveen",
   "password": "mypassword",
   "role": "Employee"
 }
@@ -106,7 +106,7 @@ Authenticates a user and returns a token.
 
 ```json
 {
-  "username": "tejaswini",
+  "username": "sai_praveen",
   "password": "mypassword"
 }
 ```
