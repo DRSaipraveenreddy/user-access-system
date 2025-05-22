@@ -12,25 +12,28 @@ Full-stack role-based access system built with:
 ## Features
 
 - User Signup & Login
-- JWT-based authentication
-- Role-based authorization (Employee / Manager / Admin)
-- PostgreSQL + TypeORM integration
+- JWT-based Authentication
+- Role-based Authorization (Employee / Manager / Admin)
+- PostgreSQL + TypeORM Integration
 - RESTful APIs
 
 ---
 
 ## Folder Structure
+
+```
 backend/
 ├── src/
-│ ├── config/ # TypeORM and DB config
-│ ├── controllers/ # Business logic (auth, users)
-│ ├── entities/ # Database models (User, etc.)
-│ ├── routes/ # API route definitions
-│ └── index.ts # Entry point of the server
-├── .env.example # Environment variable template
+│   ├── config/        # TypeORM and DB config
+│   ├── controllers/   # Business logic (auth, users)
+│   ├── entities/      # Database models (User, etc.)
+│   ├── routes/        # API route definitions
+│   └── index.ts       # Entry point of the server
+├── .env.example       # Environment variable template
 ├── package.json
 ├── tsconfig.json
 ├── README.md
+```
 
 ---
 
@@ -41,13 +44,25 @@ backend/
 ```bash
 git clone https://github.com/DRSaipraveenreddy/user-access-system.git
 cd user-access-system/backend
-### 2. Install Dependencies
-npm install
+```
 
-###3. Setup Environment Variables
-#Create your .env file from the example:
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Setup Environment Variables
+
+Create your `.env` file from the example:
+
+```bash
 cp .env.example .env
-#Update it with your PostgreSQL credentials:
+```
+
+Update it with your PostgreSQL credentials:
+
+```env
 PORT=5000
 JWT_SECRET=supersecretkey
 DB_HOST=localhost
@@ -55,35 +70,55 @@ DB_PORT=5432
 DB_USERNAME=sai_praveen
 DB_PASSWORD=your_password
 DB_DATABASE=user_access_db
+```
 
-###4. Run the Server
+### 4. Run the Server
+
+```bash
 npm run dev
-###API Endpoints
-###POST /api/auth/signup
+```
+
+---
+
+## API Endpoints
+
+### POST `/api/auth/signup`
+
 Registers a new user.
 
-Request Body:
+**Request Body:**
+
+```json
 {
   "username": "tejaswini",
   "password": "mypassword",
   "role": "Employee"
 }
+```
 
-###POST /api/auth/login
+---
+
+### POST `/api/auth/login`
+
 Authenticates a user and returns a token.
 
-Request Body:
+**Request Body:**
+
+```json
 {
   "username": "tejaswini",
   "password": "mypassword"
 }
+```
 
-###Tech Stack
+---
 
-Node.js
-Express.js
-TypeScript
-PostgreSQL
-TypeORM
-JWT
-bcrypt
+## Tech Stack
+
+- Node.js
+- Express.js
+- TypeScript
+- PostgreSQL
+- TypeORM
+- JWT
+- bcrypt
